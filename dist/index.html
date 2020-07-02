@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel=stylesheet><script src=https://use.fontawesome.com/releases/v5.13.0/js/all.js crossorigin=anonymous></script><link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel=stylesheet type=text/css><link href=https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css rel=stylesheet><title>Curtsy Writings</title><link href=/css/chunk-7d30524e.68b97800.css rel=prefetch><link href=/js/chunk-2d0dab42.6a3d2568.js rel=prefetch><link href=/js/chunk-2d21aab9.48444d1e.js rel=prefetch><link href=/js/chunk-76e2f6b2.05dbff62.js rel=prefetch><link href=/js/chunk-76e4bd02.fdf88dcb.js rel=prefetch><link href=/js/chunk-7d30524e.8a880d76.js rel=prefetch><link href=/js/chunk-fa6d936e.599b1522.js rel=prefetch><link href=/js/chunk-fa6fbc36.ffa129b9.js rel=prefetch><link href=/js/chunk-fa718538.1a538955.js rel=prefetch><link href=/js/chunk-fa730064.8893cb43.js rel=prefetch><link href=/css/app.37d0336a.css rel=preload as=style><link href=/js/app.824ce4c9.js rel=preload as=script><link href=/js/chunk-vendors.c06511a5.js rel=preload as=script><link href=/css/app.37d0336a.css rel=stylesheet></head><body class="hold-transition sidebar-mini layout-fixed"><noscript><strong>We're sorry but client doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js></script><script>/*!
+			 * Start Bootstrap - Creative v6.0.3 (https://startbootstrap.com/themes/creative)
+			 * Copyright 2013-2020 Start Bootstrap
+			 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+			 */
+			(function($) {
+				"use strict"; // Start of use strict
+
+				// Smooth scrolling using jQuery easing
+				$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+					if (
+						location.pathname.replace(/^\//, "") ==
+							this.pathname.replace(/^\//, "") &&
+						location.hostname == this.hostname
+					) {
+						var target = $(this.hash);
+						target = target.length
+							? target
+							: $("[name=" + this.hash.slice(1) + "]");
+						if (target.length) {
+							$("html, body").animate(
+								{
+									scrollTop: target.offset().top - 72,
+								},
+								1000,
+								"easeInOutExpo",
+							);
+							return false;
+						}
+					}
+				});
+
+				// Closes responsive menu when a scroll trigger link is clicked
+				$(".js-scroll-trigger").click(function() {
+					$(".navbar-collapse").collapse("hide");
+				});
+
+				// Activate scrollspy to add active class to navbar items on scroll
+				$("body").scrollspy({
+					target: "#mainNav",
+					offset: 75,
+				});
+
+				// // Collapse Navbar
+				// var navbarCollapse = function() {
+				// 	if ($("#mainNav").offset().top > 100) {
+				// 		$("#mainNav").addClass("navbar-scrolled");
+				// 	} else {
+				// 		$("#mainNav").removeClass("navbar-scrolled");
+				// 	}
+				// };
+				// // Collapse now if page is not at top
+				// navbarCollapse();
+				// // Collapse the navbar when page is scrolled
+				// $(window).scroll(navbarCollapse);
+
+				// Magnific popup calls
+				$("#portfolio").magnificPopup({
+					delegate: "a",
+					type: "image",
+					tLoading: "Loading image #%curr%...",
+					mainClass: "mfp-img-mobile",
+					gallery: {
+						enabled: true,
+						navigateByImgClick: true,
+						preload: [0, 1],
+					},
+					image: {
+						tError:
+							'<a href="%url%">The image #%curr%</a> could not be loaded.',
+					},
+				});
+			})(jQuery); // End of use strict</script><script src=/js/chunk-vendors.c06511a5.js></script><script src=/js/app.824ce4c9.js></script></body></html>
