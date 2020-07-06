@@ -3,7 +3,6 @@ const router = express.Router();
 const orders = require("../../schemas/orders");
 const protected = require("../../middleware/protect");
 const stripe = require("stripe")(process.env.stripePrivateKey);
-
 //@name     GET API to /api/customers/orders
 //@desc     gives all the orders [progress, completed, approved, disputed]
 //@acess    private
@@ -113,10 +112,13 @@ router.post("/stripe", protected, (req, res) => {
 					},
 					{ upsert: true },
 					(err, ord) => {
-						if (err) return res.status(400).json(err);
+						if (err)
+							return res.status(400).son({
+								text: err.raw.message,
+							});
 
 						if (ord.nModified === 1)
-							return res.status(200).json({
+							return res.json({
 								text: "Successfully Paid",
 								pay_status: "success",
 								order: req.body.description,
@@ -138,6 +140,8 @@ router.get("/orders/progress", protected, (req, res) => {
 			return res
 				.status(400)
 				.json({ text: "Could Not Find Your Requested Data" });
+
+		console.log(data);
 		res.json(data);
 	});
 });
@@ -222,6 +226,7 @@ router.get("/orders/:id", protected, (req, res) => {
 			return res
 				.status(400)
 				.json({ text: "Could Not Find Your Requested order" });
+
 		res.json(data);
 	});
 });
